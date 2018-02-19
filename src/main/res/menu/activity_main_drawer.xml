@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      >
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_perfil"
+                android:icon="@mipmap/perfil"
+                android:textSize="20dp"
+                android:textColor="#421381"
+                android:title="PERFIL"
+                />
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_pago"
+                android:icon="@mipmap/pago"
+                android:textColor="#421381"
+                android:textSize="30dp"
+                android:title="PAGO" />
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_historial"
+                android:icon="@mipmap/historial"
+                android:title="HISTORIAL"
+                android:textSize="30dp"
+                android:textColor="#421381"/>
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_tutorial"
+                android:icon="@mipmap/ayuda"
+                android:textSize="30dp"
+                android:textColor="#421381"
+                android:title="TUTORIAL" />
+        </menu>
+    </item>
+
+
+</menu>
+

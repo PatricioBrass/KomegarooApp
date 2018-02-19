@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/content_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/app_bar_main"
+                tools:context="com.kome.hp.komegarooandroid.Fragment.MapsFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progressBarContent" style="@style/Widget.AppCompat.ProgressBar"
+            android:background="@color/white" android:padding="120dp"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/content">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="0.99">
+
+
+                        <fragment android:id="@+id/map"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  class="com.google.android.gms.maps.MapFragment"
+                                  android:layout_weight="0.99"></fragment>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/etOrigin"
+                            android:layout_width="350dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/borde"
+                            android:ellipsize="end"
+                            android:hint="Origen"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:paddingEnd="55dp"
+                            android:singleLine="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@android:color/holo_blue_light"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:background="@mipmap/clear"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp" android:layout_alignBottom="@+id/etOrigin"
+                    android:layout_alignEnd="@+id/etOrigin"
+                />
+                        <AutoCompleteTextView
+                            android:id="@+id/etDestination"
+                            android:layout_width="350dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="76dp"
+                            android:background="@drawable/borde"
+                            android:ellipsize="end"
+                            android:hint="Destino"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:paddingEnd="55dp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@android:color/holo_blue_light" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:background="@mipmap/clear"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp" android:layout_alignBottom="@+id/etDestination"
+                    android:layout_alignEnd="@+id/etDestination"/>
+
+
+
+
+                </RelativeLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/btnFindPath"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintBottom_creator="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:layout_constraintLeft_creator="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/u_cotizar"
+                        android:layout_centerHorizontal="false"
+                        android:gravity="center" android:layout_alignParentBottom="true"
+                        android:layout_height="98dp"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp"
+                        android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+                        android:id="@+id/gif" android:visibility="gone">
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="match_parent"
+                            android:src="@drawable/solicitandoo"
+                            android:id="@+id/Imagegif"
+                            android:layout_height="match_parent" android:scaleType="centerCrop"
+                            android:cropToPadding="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTravel"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@color/colorAccent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageDrivers"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/default_img" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNameDriver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Juan Pérez"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnCall"
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/contactar_travel" />
+
+                                <Button
+                                    android:id="@+id/fab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/cancel_travel" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/active_localiza"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/localizacion_active"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnActivar"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="80dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginStart="70dp"
+                        android:background="@drawable/u_listo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/layout_ready"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mail_verificar"
+                        android:gravity="bottom">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonReady"
+                            android:background="@drawable/btn_email"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginBottom="50dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

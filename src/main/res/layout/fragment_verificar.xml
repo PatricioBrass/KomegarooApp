@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    tools:context="com.kome.hp.komegarooandroid.Fragment.VerificarFragment">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifEspere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/espere"/>
+
+</RelativeLayout>

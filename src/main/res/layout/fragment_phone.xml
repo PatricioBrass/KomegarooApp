@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="com.kome.hp.komegarooandroid.Fragment.PhoneFragment">
+<LinearLayout android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+    >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            app:titleTextColor="@color/colorAccent"
+            app:theme="@style/ThemeToolbar" android:weightSum="1">
+            <Button
+                android:layout_width="33dp"
+                android:layout_height="30dp" android:id="@+id/btnPerfil"
+                android:background="@mipmap/close" android:layout_gravity="top|left"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:background="@color/white">
+
+        <TextView
+            android:text=" Estás a un salto de finalizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:textColor="#262626" android:gravity="center" android:textSize="22sp"/>
+        <EditText
+            android:id="@+id/phone"
+            android:hint="Número de contacto"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionUnspecified"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            android:textAlignment="textStart"
+            android:inputType="textPersonName"
+            android:textColorHint="#838484"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:padding="5dp" android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" android:layout_marginTop="120dp"
+            android:backgroundTint="@color/colorAccent" android:layout_height="45dp"
+            android:drawableLeft="@mipmap/mas_569"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:gravity="bottom">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/buttonPhone"
+                android:background="@drawable/u_listo" android:layout_height="100dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</RelativeLayout>

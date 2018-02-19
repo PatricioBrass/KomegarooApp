@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popupDrivers"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_google_signin_btn_text_light_focused"
+    android:clickable="true"
+    tools:context="com.kome.hp.komegarooandroid.Fragment.PopupDriverFragment">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="30dp"
+        android:background="@drawable/border5"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCloseDriver"
+            android:layout_width="33dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imgDriverPopup"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/border1"
+                app:srcCompat="@mipmap/perfil" />
+
+            <TextView
+                android:id="@+id/txtNameDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="NAME"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBarDriverView"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:numStars="5"
+                android:rating="1.0"
+                android:stepSize="1.0"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Tu código de seguridad es "
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtCerti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Usted no tiene código de seguridad"
+                android:textColor="#262626"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/buttonCompartir"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/u_compartir"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
